@@ -42,20 +42,22 @@ void print_ans(const vector<ll> &ans){
     }
 }
 
-int main(){
+void solution(){
     ll M, N;
     cin >> M >> N;
     vector <ll> T(M+1);
     vector <ll> K(M+1);
     vector<ll> ans(M+1);
     vector<vector<ll> > table(N+1, ans);
-
     for(ll i = 1; i <= M; i++) {
         cin >> T[i] >> K[i];
     }
-
+    
     fill_table(table, T, K, ans, M, N);
     print_ans(ans);
-    
+}
+
+int main(){
+    solution();
     return 0;
 }
